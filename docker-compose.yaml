@@ -1,0 +1,21 @@
+services:
+  mirror:
+    build: 
+      dockerfile: Dockerfile.mirror
+      context: .
+    container_name: mirror
+    environment:
+      - MIRROR_DIR_PATH=/mirror
+      - MIRROR_LIST_PATH=/mirror.list
+    volumes:
+      - "./mirror.list:/mirror.list:ro"
+      - "./mirror:/mirror"
+  server:
+    build: 
+      dockerfile: Dockerfile.nginx
+      context: .
+    container_name: nginx
+    volumes:
+      - "./mirror:/mirror:ro"
+    ports:
+      - 3000:80

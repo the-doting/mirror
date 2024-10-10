@@ -1,0 +1,25 @@
+{
+  "name": "@the-doting/mirror",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/mirror.ts",
+  "scripts": {
+    "start": "bun run src/mirror.ts",
+    "build": "bun build src/mirror.ts --compile --outfile mirror"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Doting",
+    "email": "mail@doting.ir",
+    "url": "https://doting.ir"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "emitter": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5"
+  }
+}
