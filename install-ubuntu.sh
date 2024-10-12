@@ -17,8 +17,8 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 cat > /etc/docker/daemon.json <<EOF
 {
-  "insecure-registries" : ["https://docker.registry.doting.ir"],
-  "registry-mirrors": ["https://docker.registry.doting.ir"]
+  "insecure-registries" : ["https://docker.doting.ir"],
+  "registry-mirrors": ["https://docker.doting.ir"]
 }
 EOF
 
